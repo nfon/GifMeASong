@@ -37,12 +37,14 @@ $(document).ready(function()
 		video = "https://www.youtube.com/embed/"+video;
 		loadVideo(video);
 		$("#gif").attr("src","https://media0.giphy.com/media/"+gif+"/giphy.gif");
+		$("#video").hide();
 	}
 
 	$("#send").on("click",function(){
 		var url = $("#url").val();
 		url = url.replace("watch?v=", "v/");
 		loadVideo(url);
+		$("#video").show();
 	});
 
 	$("#getGif").on("click",function(){
