@@ -2,6 +2,7 @@ $(document).ready(function()
 {
 	$("#send").on("click",function(){
 		var url = $("#url").val();
+		url = url.replace("watch?v=", "v/");
 		var iframe = "<iframe width='560' height='315' src='"+url+"?autoplay=1' frameborder='0'></iframe>";
 		$("#video").html(iframe);
 	});
